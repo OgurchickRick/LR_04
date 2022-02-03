@@ -37,9 +37,19 @@ def duplicate(a: dict):
             yield result_key, copies[result_key]
   
   
-def my_print():
-    pass
+def my_print(result):
+    for key, val in result:
+        print(key)
+        for item in val:
+            print(f'\t{item}')
+        print()
   
   
 if __name__ == '__main__':
-    
+    p = way()
+    print('start')
+    files = dictionary(p)
+    print(f'Получение файлов завершено, найдено {len(files)}')
+    print('Поиск дубликатов')
+    my_print(duplicate(files))
+    print('Вывод дубликатов завершен')

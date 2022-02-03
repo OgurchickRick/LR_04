@@ -2,7 +2,12 @@ import os
 
 
 def way():
-    pass
+    while True:
+        path = str(input('Введите путь до папки:'))
+        if os.path.exists(path):
+            return path
+        else:
+            print("Неверный путь")
 
 
 def dictionary():
